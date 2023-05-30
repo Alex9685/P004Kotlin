@@ -6,7 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <LinearLayout
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/lblCalculadora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:text="Cálculo de pago de nomina"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/lblUsuario"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre del trabajador:"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/inputUser"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese su nombre "
+                android:layout_marginBottom="10dp"
+                android:padding="15dp"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="266dp"
+                android:layout_height="116dp"
+                app:srcCompat="@drawable/_1kltkhimil__ac_sx425_" />
+
+
+            <TextView
+                android:id="@+id/lblContraseña1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text=""
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/TextAppearance.AppCompat.Button"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Entrar" />
+
+            <Button
+                android:id="@+id/btnSalir"
+                style="@style/TextAppearance.AppCompat.Button"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Salir" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 
