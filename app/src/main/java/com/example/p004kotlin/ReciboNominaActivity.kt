@@ -76,9 +76,41 @@ class ReciboNominaActivity : AppCompatActivity() {
             calcularReciboNomina()
         }
 
+        btnLimpiar.setOnClickListener {
+            txtNombre.text = ""
 
+            txtHorasNormal.text = Editable.Factory.getInstance().newEditable("")
+            txtHorasExtras.text = Editable.Factory.getInstance().newEditable("")
+            rdbPuesto1.isChecked = false
+            rdbPuesto2.isChecked = false
+            rdbPuesto3.isChecked = false
+            lblSubtotal.text = ""
+            lblImpuesto.text = ""
+            lblTotal.text = ""
+            // Establecer el número de recibo automáticamente
+            val numReciboInt = generarNumeroReciboAleatorio(5, 10)
+            txtRecibo.text = numReciboInt.toString()
+        }
 
-
+        btnSalir.setOnClickListener {
+            val builder = AlertDialog.Builder(this@ReciboNominaActivity)
+            builder.setTitle("Confirmación")
+            builder.setMessage("¿Estás seguro de querer cerrar sesión?")
+            builder.setPositiveButton("Sí") { dialog, which ->
+                // Acciones a realizar si se selecciona "Sí"
+                val intent = Intent(this@ReciboNominaActivity, MainActivity::class.java)
+                startActivity(intent)
+                finish() // Finaliza la actividad actual (CalculadorActivity)
+                dialog.dismiss()
+            }
+            builder.setNegativeButton("No") { dialog, which ->
+                // Acciones a realizar si se selecciona "No"
+                dialog.dismiss() // Cierra el diálogo sin realizar ninguna acción adicional
+            }
+            val dialog = builder.create()
+            dialog.show()
+        }
+    }
 
     private fun calcularReciboNomina() {
         // Obtener los valores de los componentes
