@@ -43,7 +43,7 @@ class ReciboNominaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recibonomina)
 
-        // Inicializar los componentes de la interfaz
+        // Inicializar los componentes de la interfaz .
 
         lblMostrarNombreUser = findViewById(R.id.lblMostrarNombreUser)
         txtHorasNormal = findViewById(R.id.txtHorasNormal)
